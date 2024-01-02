@@ -43,37 +43,37 @@ public class Friday extends WeekdaysRoutines implements DrinkingCoffee, PlayingV
     }
 
     public void PrintDay() {
-        super.setTime("7.00 AM");
-        super.wakingUp(this.getTime());
-        super.setLectureNames(new String[]{"Electric Electronic Circuits"});
-        super.preparingForSchool(this.getLectureNames());
-        super.setWhen("breakfast");
-        super.eating(this.getWhen(), "");
-        super.setDestination("Bahçelievler Ankaray Station");
-        super.walkingTo(this.getDestination());
-        super.setDestination("lecture's classroom after I get off the train at Maltepe.");
-        super.walkingTo(this.getDestination());
-        this.setDrinkCoffee(false);
-        super.setHavingChat(true);
-        super.beforeLecture(this.isDrinkCoffee(), this.isHavingChat(), "Electric Electronic Circuits");
-        super.listeningLecture(this.getLectureNames(), "Electric Electronic Circuits", "9.40 AM");
-        super.setLunch(false);
-        super.setPinball(true);
-        super.afterLecture(this.isLunch(), this.isPinball(), "");
-        super.setDestination("Maltepe Ankaray Station");
-        super.walkingTo(this.getDestination());
-        super.setWhatToDo("Eating junk food and also working on personal barcode scanning project");
-        this.drinkingCoffee("Also a coffee goes well after lecture.");
-        this.setGameType("action");
-        this.playingVideoGames(this.getGameType());
-        super.freeTime(this.getWhatToDo());
-        super.setWhen("dinner");
-        super.eating(this.getWhen(), "Tarhana soup, pasta and trileçe.");
-        super.study("Linked List from Data structures");
-        this.setBookName("Atomic Habits.");
-        this.readingBook(this.getBookName());
-        super.setTime("9.30 PM");
-        super.sleep(this.getTime());
+        super.setTime("7.00 AM"); //Uyanış için saat ayarlanır.
+        super.wakingUp(super.getTime()); //Superclass'ta bulunan uyanma metodu için parametre gönderilir.
+        super.setLectureNames(new String[]{"Electric Electronic Circuits"}); //Superclass'ta bulunan fonksiyonlarda kullanılmak üzere günün dersleri parametre olarak gönderilir.
+        super.preparingForSchool(super.getLectureNames()); //Ders adlarına göre superclass'ta bulunan derse hazırlık fonksiyonuna parametre gönderilir.
+        super.setWhen("breakfast"); //Yemek yeme metodunda kullanılmak üzere yemek zamanı belirlenir.
+        super.eating(super.getWhen(), ""); //Kahvaltı yendiği anlatılmak için parametreler gönderilir, 1 adet "" parametre gönderilmesinin sebebi kahvaltıda genel olarak aynı menü çıkmaktadır.
+        super.setDestination("Bahçelievler Ankaray Station"); //Yürünülen yeri anlatmak amacıyla parametre gönderilir.
+        super.walkingTo(super.getDestination()); //Yürünülen yer parametre alınarak yazdırılır.
+        super.setDestination("lecture's classroom after I get off the train at Maltepe."); //Ankaray'dan sınıfa doğru yüründüğü destination olarak belirlenir.
+        super.walkingTo(super.getDestination()); //Yürünülen yer parametre olarak yazdırılır.
+        this.setDrinkCoffee(false); //Ders öncesi yapılacak aktivitelerde kullanılmak amacıyla kahve içme boolean değişkeni ayarlanır.
+        super.setHavingChat(true); //Ders öncesi yapılacak aktivitelerde kullanılmak amacıyla sohbet etme boolean değişkeni ayarlanır.
+        super.beforeLecture(this.isDrinkCoffee(), super.isHavingChat(), "Electric Electronic Circuits"); //Ayarlanan değişkenlere göre ders öncesi yapılan aktiviteler yazdırılır.
+        super.listeningLecture(super.getLectureNames(), "Electric Electronic Circuits", "9.40 AM"); //Ders dinleme aktivitesi gerçekleştirilir, gerekli çıktı gönderilen parametrelere göre belirlenir.
+        super.setLunch(false); //Öğle yemeğinin yenip yenmediğini belirleyen değişken ayarlanır.
+        super.setPinball(true); //Langırt oynanıp oynanmadığını belirleyen değişken ayarlanır.
+        super.afterLecture(super.isLunch(), super.isPinball(), ""); //Ayarlanan değişkenlere göre ders sonrası yapılan aktiviteler yazdırılır.
+        super.setDestination("Maltepe Ankaray Station"); //Yürünülen hedef belirlenir.
+        super.walkingTo(super.getDestination()); //Yürünülen hedefe göre çıktı alınır.
+        super.setWhatToDo("Eating junk food and also working on personal barcode scanning project"); //Boş zamanda yapılan aktiviteler yazdırılır.
+        this.drinkingCoffee("Also a coffee goes well after lecture."); //Kahve içme interface'ine istenen parametre iletilir ve çıktı alınır.
+        this.setGameType("action"); //Oyun oynama metoduna gönderilecek "oyun çeşidi" belirlenir.
+        this.playingVideoGames(this.getGameType()); //Hazırlanan parametre class içerisinde yazılan metoda iletilir.
+        super.freeTime(super.getWhatToDo()); //Boş zamanda yapılan aktivitenin çıktısı yazdırılır.
+        super.setWhen("dinner"); //Yemek zamanı belirlenir.
+        super.eating(super.getWhen(), "Tarhana soup, pasta and trileçe."); //Belirlenen zamana ve menüye çıktı alınır.
+        super.study("Linked List from Data structures"); //Çalışılan ders ile ilgili çıktı alınır.
+        this.setBookName("Atomic Habits."); //Okunulan kitap belirlenir.
+        this.readingBook(this.getBookName()); //Okunulan kitaba göre çıktı alınır.
+        super.setTime("9.30 PM"); //Yatma saati için zaman belirlenir.
+        super.sleep(super.getTime()); //Belirlenen zamana göre uyku için çıktı alınır.
     }
     
     //Interface'lerde bulunan fonksiyonlar bu class içerisinde doldurulur.

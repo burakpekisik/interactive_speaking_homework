@@ -1,6 +1,6 @@
 //22118080062 - Ali Burak Pekışık
 
-//Interface for doing shopping
+//Alışveriş yapılması için Interface oluşturulması.
 public interface Shopping {
-    void shopping(String shopName);
+    void shopping(String shopName); //Alışveriş işlemi için metod oluşturulması.
 }

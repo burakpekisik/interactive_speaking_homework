@@ -45,29 +45,29 @@ public class Saturday extends WeekendRoutines implements PlayingVideoGames, Hang
     //Gün özetinin yazdırılmasını sağlayan fonksiyon. Get set methodları kullanılarak superclass'ta ki değişkenlere müdahale edilir.
     @Override
     public void PrintDay() {
-        super.setTime("8 AM");
-        super.wakingUp(this.getTime());
-        this.preparingInstagramStory();
-        this.setBookName("Atomic Habits");
-        this.readingBook(this.getBookName());
-        this.setWhen("breakfast");
-        this.eating(this.getWhen(), "");
-        this.setGameType("action");
-        this.playingVideoGames(this.getGameType());
-        this.hangingOut("Kentpark at 1.30 PM. So I better get ready.");
-        super.setDestination("Near bus station to wait for the bus goes to Kentpark.");
-        super.walkingTo(this.getDestination());
-        super.setDestination("Walking to Kentpark after getting off the bus.");
-        super.walkingTo(this.getDestination());
-        System.out.println("Visiting dress shops, looking for new trends, new stuff, eating pasta from “Makarnam” for lunch and chatting with friends drinking Bubble Tea and lastly trying the new Chocolate with Baklava and returning dormitory.");
-        super.setWhen("dinner");
-        super.eating(this.getWhen(), "Kısır and Kumru");
-        this.drinkingCoffee("A coffee that goes after a long day!");
-        this.readingBook("Atomic Habits.");
-        this.setGameType("racing");
-        this.playingVideoGames(this.getGameType());
-        super.setTime("11 PM");
-        super.sleep(super.getTime());
+        super.setTime("8 AM"); //Uyanış için saat ayarlanır.
+        super.wakingUp(super.getTime()); //Superclass'ta bulunan uyanma metodu için parametre gönderilir.
+        this.preparingInstagramStory(); //Gün içerisinde Instagram çıktısı hazırlandığından dolayı çıktı alınır.
+        this.setBookName("Atomic Habits"); //Okunulan kitap belirlenir.
+        this.readingBook(this.getBookName()); //Kitap okuma çıktısı alınır.
+        super.setWhen("breakfast"); //Yemek zamanı belirlenir.
+        super.eating(super.getWhen(), ""); //Yemek yeme metodunda kullanılmak üzere yemek zamanı belirlenir.
+        this.setGameType("action"); //Oyun oynama metoduna gönderilecek "oyun çeşidi" belirlenir.
+        this.playingVideoGames(this.getGameType()); //Hazırlanan parametre class içerisinde yazılan metoda iletilir.
+        this.hangingOut("Kentpark at 1.30 PM. So I better get ready."); //Class içerisinde hazırlanan dışarı çıkma eylemi için hedef parametre olarak iletilir ve çıktı alınır.
+        super.setDestination("Near bus station to wait for the bus goes to Kentpark."); //Ankaray'dan sınıfa doğru yüründüğü destination olarak belirlenir.
+        super.walkingTo(super.getDestination()); //Yürünülen yer parametre olarak yazdırılır.
+        super.setDestination("Walking to Kentpark after getting off the bus."); //Ankaray'dan sınıfa doğru yüründüğü destination olarak belirlenir.
+        super.walkingTo(super.getDestination()); //Yürünülen yer parametre olarak yazdırılır.
+        System.out.println("Visiting dress shops, looking for new trends, new stuff, eating pasta from “Makarnam” for lunch and chatting with friends drinking Bubble Tea and lastly trying the new Chocolate with Baklava and returning dormitory."); //Bu çıktıyı karşılayacak tam bir method bulunmadığından println ile yazdırıldı.
+        super.setWhen("dinner"); //Yemek zamanı belirlenir.
+        super.eating(super.getWhen(), "Kısır and Kumru"); //Belirlenen zamana ve menüye çıktı alınır.
+        this.drinkingCoffee("A coffee that goes after a long day!"); //Kahve içme interface'ine istenen parametre iletilir ve çıktı alınır.
+        this.readingBook("Atomic Habits."); //Okunulan kitap belirlenir.
+        this.setGameType("racing"); //Oyun oynama metoduna gönderilecek "oyun çeşidi" belirlenir.
+        this.playingVideoGames(this.getGameType()); //Hazırlanan parametre class içerisinde yazılan metoda iletilir.
+        super.setTime("11 PM"); //Yatma saati için zaman belirlenir.
+        super.sleep(super.getTime()); //Belirlenen zamana göre uyku için çıktı alınır.
     }
     
     //Interface'lerde bulunan fonksiyonlar bu class içerisinde doldurulur.

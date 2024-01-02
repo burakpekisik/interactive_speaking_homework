@@ -1,6 +1,6 @@
 //22118080062 - Ali Burak Pekışık
 
-//Interface for playing in video games.
+//Oyun oynama işlemi için Interface oluşturulması.
 public interface PlayingVideoGames {
-    void playingVideoGames(String gameType);
+    void playingVideoGames(String gameType); //Oyun oynama işlemi için metod oluşturulması.
 }

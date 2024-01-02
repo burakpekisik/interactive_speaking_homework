@@ -44,44 +44,43 @@ public class Wednesday extends WeekdaysRoutines implements DrinkingCoffee, Playi
     
     //Gün özetinin yazdırılmasını sağlayan fonksiyon. Get set methodları kullanılarak superclass'ta ki değişkenlere müdahale edilir.
     public void PrintDay() {
-        super.setTime("7.30 AM");
-        super.wakingUp(this.getTime());
-        super.setWhen("breakfast");
-        super.eating(this.getWhen(), "");
-        super.setTime("Today's first morning coffee at 8 AM");
-        this.drinkingCoffee(this.getTime());
-        super.setWhatToDo("working on personal text recognition Android Application project from 8.15 AM - 10 AM.");
-        super.freeTime(this.getWhatToDo());
-        super.study("last weeks's OOP laboratory");
-        super.setWhatToDo("working on personal text recognition Android Application project from 11 AM - 12 PM.");
-        super.freeTime(this.getWhatToDo());
-        super.study("one of the subjects of OOP: Exception Handling");
-        super.setLectureNames(new String[]{"Object Oriented Programming Laboratory"});
-        super.preparingForSchool(this.getLectureNames());
-        super.setDestination("Bahçelievler Ankaray Station");
-        super.walkingTo(this.getDestination());
-        super.setDestination("lecture's classroom after I get off the train at Maltepe.");
-        super.walkingTo(this.getDestination());
-        super.beforeLecture(false, true, "Object Oriented Programming Laboratory");
-        super.listeningLecture(this.getLectureNames(), "Object Oriented Programming Laboratory", "2.30 PM");
-        super.setDestination("Maltepe Ankaray Station");
-        super.walkingTo(this.getDestination());
-        this.setShopName("A101");
-        this.shopping(this.getShopName());
-        super.setWhatToDo("working on personal text recognition Android Application project from 4.30 PM - 6 PM.");
-        super.freeTime(this.getWhatToDo());
-        super.setWhen("dinner");
-        super.setTime("6.15 AM");
-        super.eating(this.getWhen(), this.getTime());
+        super.setTime("7.30 AM"); //Uyanış için saat ayarlanır.
+        super.wakingUp(super.getTime()); //Superclass'ta bulunan uyanma metodu için parametre gönderilir.
+        super.setWhen("breakfast"); //Yemek yeme metodunda kullanılmak üzere yemek zamanı belirlenir.
+        super.eating(super.getWhen(), ""); //Kahvaltı yendiği anlatılmak için parametreler gönderilir, 1 adet "" parametre gönderilmesinin sebebi kahvaltıda genel olarak aynı menü çıkmaktadır.
+        super.setTime("Today's first morning coffee at 8 AM"); //Kahve için saat ayarlanır.
+        this.drinkingCoffee(super.getTime()); //Kahve içme interface'ine istenen parametre iletilir ve çıktı alınır.
+        super.setWhatToDo("working on personal text recognition Android Application project from 8.15 AM - 10 AM."); //Boş zamanda yapılan aktiviteler yazdırılır.
+        super.freeTime(super.getWhatToDo()); //Boş zamanda yapılan aktivitenin çıktısı yazdırılır.
+        super.study("last weeks's OOP laboratory"); //Çalışılan ders ile ilgili çıktı alınır.
+        super.setWhatToDo("working on personal text recognition Android Application project from 11 AM - 12 PM."); //Boş zamanda yapılan aktiviteler yazdırılır.
+        super.freeTime(super.getWhatToDo()); //Boş zamanda yapılan aktivitenin çıktısı yazdırılır.
+        super.study("one of the subjects of OOP: Exception Handling"); //Çalışılan ders ile ilgili çıktı alınır.
+        super.setLectureNames(new String[]{"Object Oriented Programming Laboratory"}); //Superclass'ta bulunan fonksiyonlarda kullanılmak üzere günün dersleri parametre olarak gönderilir.
+        super.preparingForSchool(super.getLectureNames()); //Ders adlarına göre superclass'ta bulunan derse hazırlık fonksiyonuna parametre gönderilir.
+        super.setDestination("Bahçelievler Ankaray Station"); //Yürünülen yeri anlatmak amacıyla parametre gönderilir.
+        super.walkingTo(super.getDestination()); //Yürünülen yer parametre alınarak yazdırılır.
+        super.setDestination("lecture's classroom after I get off the train at Maltepe."); //Yürünülen yeri anlatmak amacıyla parametre gönderilir.
+        super.walkingTo(super.getDestination()); //Yürünülen yer parametre alınarak yazdırılır.
+        super.beforeLecture(false, true, "Object Oriented Programming Laboratory"); //Ayarlanan değişkenlere göre ders öncesi yapılan aktiviteler yazdırılır.
+        super.listeningLecture(super.getLectureNames(), "Object Oriented Programming Laboratory", "2.30 PM"); //Ders dinleme aktivitesi gerçekleştirilir, gerekli çıktı gönderilen parametrelere göre belirlenir.
+        super.setDestination("Maltepe Ankaray Station"); //Yürünülen hedef belirlenir.
+        super.walkingTo(super.getDestination()); //Yürünülen hedefe göre çıktı alınır.
+        this.setShopName("A101"); //Alışveriş yapma Interface'sinde kullanılacak market adı belirlenir.
+        this.shopping(this.getShopName()); //Belirlenen market adı parametre olarak gönderilir ve yazdırılır.
+        super.setWhatToDo("working on personal text recognition Android Application project from 4.30 PM - 6 PM."); //Boş zamanda yapılan aktiviteler yazdırılır.
+        super.freeTime(super.getWhatToDo()); //Boş yapılan aktivitenin çıktısı yazdırılır.
+        super.setWhen("dinner"); //Yemek yeme metodunda kullanılmak üzere yemek zamanı belirlenir.
+        super.eating(super.getWhen(), "pasta and dolma"); //Belirlenen zamana ve menüye çıktı alınır.
         super.setTime("After dinner a coffee goes well at 6.45 PM");
-        this.drinkingCoffee(this.getTime());
-        super.study("Differential Equations");
-        this.setGameType("racing games");
-        this.playingVideoGames(this.getGameType());
-        super.setSeriesName("Dr. House Season 4");
-        super.watch(this.getSeriesName());
-        super.setTime("22.30 PM");
-        super.sleep(this.getTime());
+        this.drinkingCoffee(super.getTime()); //Kahve içme interface'ine istenen parametre iletilir ve çıktı alınır.
+        super.study("Differential Equations"); //Çalışılan ders ile ilgili çıktı alınır.
+        this.setGameType("racing games"); //Oyun oynama metoduna gönderilecek "oyun çeşidi" belirlenir.
+        this.playingVideoGames(this.getGameType()); //Hazırlanan parametre class içerisinde yazılan metoda iletilir.
+        super.setSeriesName("Dr. House Season 4"); //İzlenilen dizi adı belirlenir.
+        super.watch(super.getSeriesName()); //İzlenilen diziye göre çıktı alınır.
+        super.setTime("10.30 PM"); //Yatma saati için zaman belirlenir.
+        super.sleep(super.getTime()); //Belirlenen zamana göre uyku için çıktı alınır.
     }
     
     //Interface'lerde bulunan fonksiyonlar bu class içerisinde doldurulur.

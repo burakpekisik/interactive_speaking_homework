@@ -2,5 +2,5 @@
 
 //Interface for reading book.
 public interface ReadingBook {
-    void readingBook(String bookName);
+    void readingBook(String bookName); //Declaring method for reading book.
 }

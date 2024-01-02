@@ -34,25 +34,26 @@ public class Sunday extends WeekendRoutines implements PlayingVideoGames, Readin
     //Gün özetinin yazdırılmasını sağlayan fonksiyon. Get set methodları kullanılarak superclass'ta ki değişkenlere müdahale edilir.
     @Override
     public void PrintDay() {
-        super.setTime("8.00 AM");
-        this.preparingInstagramStory();
-        super.setSeriesName("Dr. House Season 4");
-        super.watch(this.getSeriesName());
-        super.setWhatToDo("working on personal barcode project.");
-        super.freeTime(this.getWhatToDo());
-        this.setGameType("action games");
-        this.playingVideoGames(this.getGameType());
-        super.eating("lunch", "For today's lunch I'd like to go with something cheaper; Noodles with curry chicken.");
-        this.playingVideoGames("playing racing video games, from 4 PM to 6 PM");
-        super.eating("dinner", "beands and rice with pickles");
-        this.drinkingCoffee("As always, I love drinking coffee after dinner.");
-        super.study("Differential Equations for 2 hours");
-        this.setBookName("Atomic Habits");
-        this.readingBook(this.getBookName());
-        super.setSeriesName("Dr. House Season 4");
-        super.watch(this.getSeriesName());
-        super.setTime("10 PM");
-        super.sleep(this.getTime());
+        super.setTime("8.00 AM"); //Uyanış için saat ayarlanır.
+        super.wakingUp(super.getTime()); //Superclass'ta bulunan uyanma metodu için parametre gönderilir.
+        this.preparingInstagramStory(); //Gün içerisinde Instagram gönderisi hazırlandığından dolayı çıktı alınır.
+        super.setSeriesName("Dr. House Season 4"); //İzlenilen dizi adı belirlenir.
+        super.watch(super.getSeriesName()); //İzlenilen diziye göre çıktı alınır.
+        super.setWhatToDo("working on personal barcode project."); //Boş zamanda yapılan aktiviteler yazdırılır.
+        super.freeTime(super.getWhatToDo()); //Boş zamanda yapılan aktivitenin çıktısı yazdırılır.
+        this.setGameType("action games"); //Oyun oynama metoduna gönderilecek "oyun çeşidi" belirlenir.
+        this.playingVideoGames(this.getGameType()); //Hazırlanan parametre class içerisinde yazılan metoda iletilir.
+        super.eating("lunch", "For today's lunch I'd like to go with something cheaper; Noodles with curry chicken."); //Yenilen öğle yemeği hakkında superclass üzerinde bulunan fonksiyon üzerinden çıktı alınır.
+        this.playingVideoGames("playing racing video games, from 4 PM to 6 PM"); //Oyun oynama metoduna gönderilecek "oyun çeşidi" belirlenir.
+        super.eating("dinner", "beands and rice with pickles"); //Belirlenen zamana ve menüye çıktı alınır.
+        this.drinkingCoffee("As always, I love drinking coffee after dinner."); //Kahve içme interface'ine istenen parametre iletilir ve çıktı alınır.
+        super.study("Differential Equations for 2 hours"); //Çalışılan ders ile ilgili çıktı alınır.
+        this.setBookName("Atomic Habits"); //Okunulan kitap belirlenir.
+        this.readingBook(this.getBookName()); //Okunulan kitaba göre çıktı alınır.
+        super.setSeriesName("Dr. House Season 4"); //İzlenilen dizi adı belirlenir.
+        super.watch(super.getSeriesName()); //İzlenilen diziye göre çıktı alınır.
+        super.setTime("10 PM"); //Yatma saati için zaman belirlenir.
+        super.sleep(super.getTime()); //Belirlenen zamana göre uyku için çıktı alınır.
     }
     
     //Interface'lerde bulunan fonksiyonlar bu class içerisinde doldurulur.

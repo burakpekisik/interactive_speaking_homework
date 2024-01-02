@@ -1,6 +1,6 @@
 //22118080062 - Ali Burak Pekışık
 
-//Interface for using in hanging out.
+//Dışarı çıkma işlemi için Interface oluşturulması.
 public interface HangingOut {
-    void hangingOut(String destination);
+    void hangingOut(String destination); //Dışarı çıkma işlemi için metod oluşturulması.
 }

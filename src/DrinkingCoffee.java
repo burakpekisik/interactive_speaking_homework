@@ -1,6 +1,6 @@
 //22118080062 - Ali Burak Pekışık
 
-//Interface for using in drinking coffee.
+//Kahve içme işlemi için Interface oluşturulması.
 public interface DrinkingCoffee {
-    void drinkingCoffee(String time);
+    void drinkingCoffee(String time); //Kahve içme metodunun oluşturulması.
 }
